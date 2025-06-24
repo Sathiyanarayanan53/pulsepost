@@ -61,7 +61,7 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+
+app.listen(443, () => {
+  console.log(`Server is running on https://pulse-post-c18g.onrender.com`);
 });
