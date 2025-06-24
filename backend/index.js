@@ -62,6 +62,6 @@ app.get("/", (req, res) => {
 });
 
 
-app.listen(443, () => {
-  console.log(`Server is running on https://pulse-post-c18g.onrender.com`);
+app.listen(3000, () => {
+  console.log(`Server is running on http://localhost:3000`);
 });
