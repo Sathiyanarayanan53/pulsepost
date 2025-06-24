@@ -15,10 +15,10 @@ mongoose
 .catch((err) => console.error("MongoDB connection error:", err));
 // Define a Mongoose model for the email credentials
 const crediential = mongoose.model("crediential", {}, "bulkmail");
-app.get("/sendemail", (req, res) => {
-  var message = req.query.msg;
-  var subject = req.query.subject;
-  var emails = req.query.emailsList;
+app.post("/sendemail", (req, res) => {
+  var message = req.body.msg;
+  var subject = req.body.subject;
+  var emails = req.body.emailsList;
   console.log("Emails to send:", emails);
     
   crediential.find().then((data) => {

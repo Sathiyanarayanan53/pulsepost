@@ -11,7 +11,7 @@ function App() {
   }
   const send = () => {
     setStatus(true);
-    axios.get("https://pulse-post-c18g.onrender.com/sendemail", { msg: msg, subject: subject, emailsList: emails })
+    axios.post("https://pulsepost-bd6b.onrender.com/sendemail", { msg: msg, subject: subject, emailsList: emails } )
       .then((data) => {
         if (data.data === true) {
           alert("Email sent successfully");
